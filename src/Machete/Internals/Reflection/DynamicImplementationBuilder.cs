@@ -50,7 +50,7 @@
             try
             {
                 var typeBuilder = builder.DefineType(typeName,
-                    TypeAttributes.Serializable | TypeAttributes.Class | TypeAttributes.Public | TypeAttributes.Sealed,
+                    TypeAttributes.Class | TypeAttributes.Public | TypeAttributes.Sealed,
                     typeof(object), new[] {interfaceType});
 
                 typeBuilder.DefineDefaultConstructor(MethodAttributes.Public);
@@ -122,11 +122,7 @@
             {
                 const AssemblyBuilderAccess access = AssemblyBuilderAccess.RunAndCollect;
 
-                #if NETCORE
                 var assemblyBuilder = AssemblyBuilder.DefineDynamicAssembly(new AssemblyName(name), access);
-                #else
-                var assemblyBuilder = AppDomain.CurrentDomain.DefineDynamicAssembly(new AssemblyName(name), access);
-                #endif
 
                 var moduleBuilder = assemblyBuilder.DefineDynamicModule(assemblyName);
 

@@ -28,7 +28,7 @@ namespace Machete.HL7Schema.V26
         ValueList<XON> PatientPrimaryFacility { get; }
 
         /// <summary>
-        /// PD1-4: Patient Primary Care Provider Name & ID No.
+        /// PD1-4: Patient Primary Care Provider Name &amp; ID No.
         /// </summary>
         ValueList<XCN> PatientPrimaryCareProviderNameIdNo { get; }
 

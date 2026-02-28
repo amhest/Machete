@@ -37,12 +37,12 @@ namespace Machete.HL7Schema.V26
         Value<string> NonCoveredDays8 { get; }
 
         /// <summary>
-        /// UB2-6: Value Amount & Code
+        /// UB2-6: Value Amount &amp; Code
         /// </summary>
         Value<UVC> ValueAmountCode { get; }
 
         /// <summary>
-        /// UB2-7: Occurrence Code & Date (32-35)
+        /// UB2-7: Occurrence Code &amp; Date (32-35)
         /// </summary>
         Value<OCD> OccurrenceCodeDate3235 { get; }
 

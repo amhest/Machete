@@ -29,12 +29,12 @@
         /// <summary>
         /// Get a translater, specifying the factory if the translater doesn't already exist
         /// </summary>
-        /// <typeparam name="TResult"></typeparam>
-        /// <typeparam name="TInput"></typeparam>
+        /// <typeparam name="T"></typeparam>
+        /// <typeparam name="TIn"></typeparam>
         /// <returns></returns>
-        IEntityTranslator<TInput, TSchema> CreateEntityTranslator<TResult, TInput>(IEntityTranslatorSpecification<TResult, TInput, TSchema> specification)
-            where TResult : TSchema
-            where TInput : TSchema;
+        IEntityTranslator<TIn, TSchema> CreateEntityTranslator<T, TIn>(IEntityTranslatorSpecification<T, TIn, TSchema> specification)
+            where T : TSchema
+            where TIn : TSchema;
 
         /// <summary>
         /// Adds a translater for a property by name

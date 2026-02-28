@@ -58,7 +58,7 @@ namespace Machete.HL7Schema.V26
         Value<decimal> NonCoveredDays { get; }
 
         /// <summary>
-        /// UB1-10: Value Amount & Code
+        /// UB1-10: Value Amount &amp; Code
         /// </summary>
         Value<UVC> ValueAmountCode { get; }
 
